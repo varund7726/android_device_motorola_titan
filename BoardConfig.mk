@@ -47,3 +47,28 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
 # inherit from the proprietary version
 -include vendor/motorola/titan/BoardConfigVendor.mk
+
+#LZMA compression
+WITH_LZMA_OTA:= true
+
+
+#RR
+TARGET_TC_ROM := 5.2
+
+TARGET_TC_KERNEL := 4.9
+
+RROPTI := true
+
+RR_O3 := true
+
+RR_STRICT := false
+
+RR_GRAPHITE := true
+
+RR_KRAIT := false
+
+RR_PIPE := true
+
+TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
+
+RR_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
